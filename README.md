@@ -56,6 +56,7 @@ The vector tiles can be unpacked from MBTiles (SQLite) container and hosted just
 To unpack and ungzip the tiles I have used [mb-util](https://github.com/mapbox/mbutil):
 
     ./mb-util --image_format=pbf countries.mbtiles countries
+    find . -empty -print -delete
     gzip -d -r -S .pbf *
     find . -type f -exec mv '{}' '{}'.pbf \;
 
